@@ -12,5 +12,5 @@ jobs:
 
     steps:
       - name: Add SHORT_SHA env property with commit short sha
-      #  run: curl -I https://ktn-jenkins01p.eagro.az:59943/multibranch-webhook-trigger/invoke?token=azizanimalmulti
-        run: curl -I https://youtube.com
+        run: curl https://ktn-jenkins01p.eagro.az:59943/multibranch-webhook-trigger/invoke?token=azizanimalmulti
+      #  run: curl -I https://youtube.com
