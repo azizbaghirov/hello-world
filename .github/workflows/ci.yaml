@@ -1,0 +1,15 @@
+name: Java 11 Gradle Build
+
+on:
+  push:
+    branches: [main, dev]
+
+########################## STAGING BUILD AND DEPLOY ##########################
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/dev'
+
+    steps:
+      - name: Add SHORT_SHA env property with commit short sha
+        run: curl -I https://ktn-jenkins01p.eagro.az:59943/multibranch-webhook-trigger/invoke?token=azizanimalmulti
